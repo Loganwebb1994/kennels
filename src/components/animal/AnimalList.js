@@ -16,6 +16,8 @@ export const AnimalList = () => {
 
 
     return (
+    <>
+    <h2>Animals</h2>
     <div className="animals">
         {console.log("AnimalList: Render", animals)}
         {
@@ -24,5 +26,6 @@ export const AnimalList = () => {
         })
         }
     </div>
+    </>
     )
 }
