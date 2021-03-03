@@ -13,7 +13,6 @@ export const AnimalList = () => {
   const { customers, getCustomers } = useContext(CustomerContext)
   //useEffect - reach out to the world for something
   useEffect(() => {
-    console.log("AnimalList: useEffect - getAnimals")
     getLocations()
     .then(getCustomers)
     .then(getAnimals)
