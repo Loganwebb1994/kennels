@@ -35,7 +35,7 @@ return (
       
           return <AnimalCard key={animal.id} location={location} customer={owner} animal={animal} />
       })
-        }
+        }         
     </div>
     </>
     )
