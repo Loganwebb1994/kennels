@@ -6,7 +6,7 @@ import { useHistory } from 'react-router-dom';
 
 export const EmployeeForm = () => {
   console.log("do I get here?")
-    const { addEmployee } = useContext(EmployeeContext)
+    const { addEmployees } = useContext(EmployeeContext)
     const { locations, getLocations } = useContext(LocationContext)
 
 
@@ -43,7 +43,7 @@ export const EmployeeForm = () => {
         window.alert("Please select a location and a customer")
       } else {
 
-        addEmployee(employee)
+        addEmployees(employee)
         .then(() => history.push("/employees"))
       }
     }
