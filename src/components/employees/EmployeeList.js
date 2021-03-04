@@ -18,7 +18,6 @@ export const EmployeeList = () =>{
     <button onClick={() => {history.push("/employee/create")}}>
       Add Employee
     </button>
-        {console.log("EmployeeList: render", employees)}
         {
         employees.map(employee => {
             return <Employee key={employee.id} employee={employee} />

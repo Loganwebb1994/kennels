@@ -24,6 +24,10 @@ export const EmployeeProvider = (props) => {
         .then(getEmployees)
     }
 
+    const getEmployeeById = (id) => {
+        return fetch(`http://localhost:8088/employees/${id}?_expand=location`)
+            .then(res => res.json())
+    }
     /*
         You return a context provider which has the
         `animals` state, `getAnimals` function,
@@ -32,7 +36,7 @@ export const EmployeeProvider = (props) => {
     */
     return (
         <EmployeeContext.Provider value={{
-            employees, getEmployees, addEmployees
+            employees, getEmployees, addEmployees, getEmployeeById,
         }}>
             {props.children}
         </EmployeeContext.Provider>
