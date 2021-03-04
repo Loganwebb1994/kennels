@@ -5,7 +5,6 @@ import "./Employee.css"
 import { useHistory } from 'react-router-dom';
 
 export const EmployeeForm = () => {
-  console.log("do I get here?")
     const { addEmployees } = useContext(EmployeeContext)
     const { locations, getLocations } = useContext(LocationContext)
 
