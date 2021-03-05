@@ -14,13 +14,11 @@ export const EmployeeDetail = () => {
 	const history = useHistory();
 
   useEffect(() => {
-    console.log("useEffect", employeeId)
     getEmployeeById(employeeId)
     .then((response) => {
       setEmployee(response)
     })
     }, [])
-      {console.log(employeeId)}
   return (
     <section className="employee">
       <h3 className="employee__name">{employee.name}</h3>
@@ -28,3 +26,4 @@ export const EmployeeDetail = () => {
     </section>
   )
 }
+
