@@ -24,6 +24,7 @@ export const LocationDetail = () => {
     <section className="location">
       <h3 className="location__name">{location.name}</h3>
       <div className="location__address">Address: {location.address}</div>
+      <button onClick={() => {history.push(`/locations/edit/${location.id}`)}}>Edit</button>
     </section>
   )
 }
